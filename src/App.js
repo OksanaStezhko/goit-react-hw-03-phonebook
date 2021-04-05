@@ -8,14 +8,26 @@ import Filter from './components/Filter';
 
 class App extends Component {
   state = {
-    contacts: [
-      { id: 'id-1', name: 'Rosie Simpson', number: '+380505955555' },
-      { id: 'id-2', name: 'Hermione Kline', number: '+380679444544' },
-      { id: 'id-3', name: 'Eden Clements', number: '+380689555555' },
-      { id: 'id-4', name: 'Annie Copeland', number: '+380959555555' },
-    ],
+    contacts: [],
     filter: '',
   };
+
+  componentDidMount() {
+    const contacts = localStorage.getItem('contacts');
+    const parsedContacts = JSON.parse(contacts);
+
+    if (parsedContacts) {
+      this.setState({ contacts: parsedContacts });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const prevContacts = prevState.contacts;
+    const nextContacts = this.state.contacts;
+    if (prevContacts !== nextContacts) {
+      localStorage.setItem('contacts', JSON.stringify(nextContacts));
+    }
+  }
 
   addContact = data => {
     if (this.state.contacts.find(contact => contact.name === data.name)) {
