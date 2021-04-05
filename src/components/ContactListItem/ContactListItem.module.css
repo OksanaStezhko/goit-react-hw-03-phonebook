@@ -1,0 +1,32 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.item:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.info {
+  width: calc((100% - 30px) / 2);
+  margin-right: 20px;
+  padding: 5px;
+  border: 1px solid rgb(106, 153, 207);
+}
+
+.button {
+  width: 110px;
+  border: 1px solid rgb(106, 153, 207);
+  background-color: rgba(106, 153, 207, 0.3);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.button:hover,
+.button:focus {
+  background-color: rgba(148, 255, 212, 0.8);
+  border: 1px solid rgb(106, 153, 207);
+  outline: 1px solid rgb(106, 153, 207);
+}

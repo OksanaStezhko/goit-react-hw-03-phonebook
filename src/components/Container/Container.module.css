@@ -1,0 +1,27 @@
+.container {
+  /* display: flex;
+  justify-content: space-between; */
+  text-align: center;
+  max-width: 800px;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  background-image: linear-gradient(
+    to left,
+    rgba(148, 255, 212, 0.8),
+    rgba(144, 246, 212, 0.82),
+    rgba(140, 236, 211, 0.84),
+    rgba(137, 227, 211, 0.85),
+    rgba(133, 218, 210, 0.87),
+    rgba(129, 209, 210, 0.89),
+    rgba(125, 199, 209, 0.91),
+    rgba(121, 190, 209, 0.93),
+    rgba(117, 181, 208, 0.95),
+    rgba(114, 172, 208, 0.96),
+    rgba(110, 162, 207, 0.98),
+    rgb(106, 153, 207)
+  );
+  /* background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%); */
+}
