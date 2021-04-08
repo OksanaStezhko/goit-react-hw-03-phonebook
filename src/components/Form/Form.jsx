@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import style from './Form.module.css';
-
+import PropTypes from 'prop-types';
 import shortid from 'shortid';
 
 class Form extends Component {
@@ -64,5 +64,10 @@ class Form extends Component {
     );
   }
 }
+
+Form.propTypes = {
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+};
 
 export default Form;

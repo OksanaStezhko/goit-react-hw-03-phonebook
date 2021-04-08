@@ -9,4 +9,12 @@ const Container = ({ children }) => (
 Container.propTypes = {
   children: PropTypes.node.isRequired,
 };
+
+Container.defaultProps = {
+  children: null,
+};
+
+Container.propTypes = {
+  children: PropTypes.node,
+};
 export default Container;
